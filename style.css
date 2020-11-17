@@ -1,0 +1,78 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+body {
+    background-color: #02cb99;
+    font-family: "Roboto", sans-serif;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+}
+
+.phone {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+.logo {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin:2rem 0;
+}
+
+.logo i{
+    font-size:3rem;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.logo p {
+    margin: 0;
+    color:black;
+    font-weight:bold
+}
+
+/* Carousal settings: */
+.carousel-container{
+    overflow: hidden;
+    width:100vw;
+}
+
+.carousel{
+display:flex;
+
+}
+
+.slide{
+height:400px; 
+width:100%;
+
+/* position: absolute; */
+text-align: center;
+}
+
+.slide img{
+
+    object-fit: cover;
+    /* max-height:400px; */
+    width:400px;
+    height:400px;
+    /* display: inline-block; */
+}
