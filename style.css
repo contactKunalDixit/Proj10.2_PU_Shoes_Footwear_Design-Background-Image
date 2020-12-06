@@ -78,7 +78,7 @@ a {
 .slide {
     position: absolute;
     width: 100%;
-    height:60%;
+    height:100%;
     opacity:0;
     transition:opacity 0.4s ease-in-out;
 }
@@ -166,35 +166,22 @@ text-align: start;
 }
 
 .slide:nth-child(2){
-    background-image: url("paul-gaudriault-a-QH9MAAVNI-unsplash.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.slide:nth-child(3){
     background-image:url("felipepelaquim-6zO5VKogoZE-unsplash.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.slide:nth-child(4){
+.slide:nth-child(3){
 background-image:url("radek-skrzypczak-WlB8TsI_th0-unsplash.jpg");
 background-position: center top;
 background-size:cover;
 background-repeat: no-repeat;
 }
 
-.slide:nth-child(5){
+.slide:nth-child(4){
     background-image:url("dan-carlson-HxOlRTqo_F0-unsplash.jpg");
     background-position:center top;
     background-size:cover;
     background-repeat:no-repeat;
-}
-.slide:nth-child(6){
-    background-image:url("imani-bahati-LxVxPA1LOVM-unsplash.jpg");
-    background-position: center top;
-    background-repeat:no-repeat;
-    background-size:cover;
 }
