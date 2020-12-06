@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: #02cb99;
+    background-color: rgb(204,56,31);
     font-family: "Roboto", sans-serif;
 
 }
@@ -19,6 +19,7 @@ a {
     top: 2rem;
     left: 2rem;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .phone {
@@ -32,11 +33,11 @@ a {
     color: white;
     text-align: center;
     font-size: 2rem;
-    margin:2rem 0;
+    margin: 2rem 0;
 }
 
-.logo i{
-    font-size:3rem;
+.logo i {
+    font-size: 3rem;
 }
 
 .logo h2 {
@@ -45,34 +46,155 @@ a {
 
 .logo p {
     margin: 0;
-    color:black;
-    font-weight:bold
+    color: black;
+    font-weight: bold
 }
 
 /* Carousal settings: */
-.carousel-container{
+/* .carousel-container {
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+} */
+
+
+.container{
+    position:relative;
+    overflow: hidden;
+    overflow-y: auto;
     width:100vw;
+    height: calc(100vh - 1rem);
+    min-width:600px;
 }
 
-.carousel{
-display:flex;
+/* .carousel {
+    position:relative;
+    overflow:hidden;
+    height:100vh;
+    width:100vw;
+
+} */
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height:60%;
+    opacity:0;
+    transition:opacity 0.4s ease-in-out;
+}
+
+
+.slide.current{
+    opacity:1;
+}
+
+
+
+.slide .content{
+    position:absolute;
+    top :50%;
+    left:-600px;
+    width:600px;
+    opacity:0;
+    background-color:rgb(255,255,255,0.4);
+    color:#333;
+    padding:35px;
+}
+
+.slide .content {
+    text-align: center;
+    cursor: pointer;
+}
+
+.slide .content h1{
+    margin-bottom:10px;
+}
+
+.slide .content p{
+text-align: start;
+}
+.slide.current .content{
+    opacity:1;
+    transform:translateX(600px);
+    transition: all 0.5s ease-in-out 0.6s;
+}
+
+
+.Button button#left {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border-width: 0.3rem;;
+    outline: none;
+    border-color: white;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color:white;
+
 
 }
 
-.slide{
-height:400px; 
-width:100%;
-
-/* position: absolute; */
-text-align: center;
+.Button button#right {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    background-color: transparent;
+    border-radius: 50% ;
+    border-width: 0.3rem;
+    outline: none;
+    border-color: white;
+    border-width: 0.3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color:white;
 }
 
-.slide img{
+.Button button:hover {
+    background-color: white;
+    color: #333;
+}
 
-    object-fit: cover;
-    /* max-height:400px; */
-    width:400px;
-    height:400px;
-    /* display: inline-block; */
+/* Background Images using pseudo selectors*/
+
+.slide:first-child {
+    background:url("revolt-164_6wVEHfI-unsplash.jpg") no-repeat center center/cover;
+
+}
+
+.slide:nth-child(2){
+    background-image: url("paul-gaudriault-a-QH9MAAVNI-unsplash.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide:nth-child(3){
+    background-image:url("felipepelaquim-6zO5VKogoZE-unsplash.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide:nth-child(4){
+background-image:url("radek-skrzypczak-WlB8TsI_th0-unsplash.jpg");
+background-position: center top;
+background-size:cover;
+background-repeat: no-repeat;
+}
+
+.slide:nth-child(5){
+    background-image:url("dan-carlson-HxOlRTqo_F0-unsplash.jpg");
+    background-position:center top;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.slide:nth-child(6){
+    background-image:url("imani-bahati-LxVxPA1LOVM-unsplash.jpg");
+    background-position: center top;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
